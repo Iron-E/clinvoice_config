@@ -11,19 +11,13 @@ readme = "README.md"
 repository = "https://www.github.com/Iron-E/clinvoice_config"
 
 [dependencies]
-# CLInvoice
 clinvoice_error = {branch = "release/0.3", git = "https://github.com/Iron-E/clinvoice_error"}
 clinvoice_schema = {branch = "release/0.8", features = ["serde_support"], git = "https://github.com/Iron-E/clinvoice_schema"}
 
-# Directories
 dirs = "3"
-
-# Errors
-thiserror = "1"
-
-# Serialization
 humantime-serde = "1"
 serde = {features = ["derive"], version = "1"}
+thiserror = "1"
 toml = "0.5"
 
 [dev-dependencies]
