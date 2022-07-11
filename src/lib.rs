@@ -10,6 +10,7 @@ mod employees;
 mod error;
 mod invoices;
 mod jobs;
+mod organizations;
 mod store;
 mod store_value;
 
@@ -19,5 +20,6 @@ pub use employees::Employees;
 pub use error::{Error, Result};
 pub use invoices::Invoices;
 pub use jobs::Jobs;
+pub use organizations::Organizations;
 pub use store::Store;
 pub use store_value::StoreValue;

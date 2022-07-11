@@ -10,7 +10,6 @@ use serde::{Deserialize, Serialize};
 /// ```rust
 /// # assert!(toml::from_str::<clinvoice_config::Employees>(r#"
 /// id = 1
-/// organization_id = 2
 /// # "#).is_ok());
 /// ```
 #[derive(
@@ -22,10 +21,4 @@ pub struct Employees
 	///
 	/// Frontends for CLInvoice should provide mechanisms to assign this setting for the user.
 	pub id: Option<Id>,
-
-	/// The [`Id`] of the [`Organization`](clinvoice_schema::Organization) which uses the CLInvoice
-	/// client.
-	///
-	/// Frontends for CLInvoice should provide mechanisms to assign this setting for the user.
-	pub organization_id: Option<Id>,
 }

@@ -2,7 +2,7 @@ use std::{collections::BTreeMap, fs, path::PathBuf};
 
 use serde::{Deserialize, Serialize};
 
-use crate::{Adapters, Employees, Error, Invoices, Jobs, Result, Store, StoreValue};
+use crate::{Adapters, Employees, Organizations, Error, Invoices, Jobs, Result, Store, StoreValue};
 
 /// The data type backing a user's configuration.
 ///
@@ -14,13 +14,15 @@ use crate::{Adapters, Employees, Error, Invoices, Jobs, Result, Store, StoreValu
 /// # assert!(toml::from_str::<clinvoice_config::Config>(r#"
 /// [employees]
 /// id = 1
-/// organization_id = 2
 ///
 /// [invoices]
 /// default_currency = "USD"
 ///
 /// [jobs]
 /// default_increment = "15min"
+///
+/// [organizations]
+/// employer_id = 2
 ///
 /// [stores]
 /// default = "foo"
@@ -44,6 +46,10 @@ pub struct Config
 	/// The [`[jobs]`](Jobs) field.
 	#[serde(default)]
 	pub jobs: Jobs,
+
+	/// The [`[organizations]`](Organizations) field.
+	#[serde(default)]
+	pub organizations: Organizations,
 
 	/// The `[stores]` field, which dictates the [`Store`]s that CLInvoice may operate on. Keyed
 	/// on the label of the [`Store`].
