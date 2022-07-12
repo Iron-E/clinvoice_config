@@ -8,15 +8,19 @@ use crate::Adapters;
 #[derive(Debug, Error)]
 pub enum Error
 {
+	#[allow(missing_docs)]
 	#[error("Using this adapter requires the `{0}` feature")]
 	FeatureNotFound(Adapters),
 
+	#[allow(missing_docs)]
 	#[error(transparent)]
 	Io(#[from] io::Error),
 
+	#[allow(missing_docs)]
 	#[error(transparent)]
 	TomlDe(#[from] toml::de::Error),
 
+	#[allow(missing_docs)]
 	#[error(transparent)]
 	TomlSer(#[from] toml::ser::Error),
 }
