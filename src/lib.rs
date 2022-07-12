@@ -4,6 +4,8 @@
 //! The types in this crate are compatible with [`serde`]. In particular, this crate is intended
 //! for use with [`toml`].
 
+#![warn(missing_docs)]
+
 mod adapters;
 mod config;
 mod employees;
