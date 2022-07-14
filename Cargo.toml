@@ -12,7 +12,7 @@ repository = "https://www.github.com/Iron-E/clinvoice-config"
 
 [dependencies]
 clinvoice-error = {branch = "release/0.3", git = "https://github.com/Iron-E/clinvoice-error"}
-clinvoice-schema = {branch = "release/0.8", features = ["serde_support"], git = "https://github.com/Iron-E/clinvoice-schema"}
+clinvoice-schema = {branch = "release/0.9", features = ["serde"], git = "https://github.com/Iron-E/clinvoice-schema"}
 
 dirs = "3"
 humantime-serde = "1"
