@@ -17,6 +17,10 @@ pub enum Error
 	Io(#[from] io::Error),
 
 	#[allow(missing_docs)]
+	#[error("The `{0}` key in the `[{1}]` field of the configuration file has no value")]
+	NotConfigured(String, String),
+
+	#[allow(missing_docs)]
 	#[error(transparent)]
 	TomlDe(#[from] toml::de::Error),
 
