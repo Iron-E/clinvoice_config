@@ -164,7 +164,7 @@ impl Config
 
 		if !path.is_file()
 		{
-			return Config::init();
+			return Self::init();
 		}
 
 		let config_bytes = fs::read(path)?;

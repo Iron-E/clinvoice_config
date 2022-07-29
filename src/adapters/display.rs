@@ -8,7 +8,7 @@ impl Display for Adapters
 	{
 		match self
 		{
-			Adapters::Postgres => "Postgres".fmt(formatter),
+			Self::Postgres => "Postgres".fmt(formatter),
 		}
 	}
 }

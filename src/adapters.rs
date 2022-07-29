@@ -1,3 +1,5 @@
+#![allow(clippy::use_self)]
+
 mod display;
 
 use serde::{Deserialize, Serialize};
