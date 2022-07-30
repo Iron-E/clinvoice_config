@@ -1,5 +1,6 @@
 #![allow(clippy::std_instead_of_core)]
 
+use core::result::Result as StdResult;
 use std::io;
 
 use thiserror::Error;
@@ -31,4 +32,5 @@ pub enum Error
 	TomlSer(#[from] toml::ser::Error),
 }
 
-clinvoice_error::AliasResult!();
+/// A [`Result`](StdResult) for the crate.
+pub type Result<T> = StdResult<T, Error>;
