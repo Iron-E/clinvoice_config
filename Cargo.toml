@@ -1,7 +1,7 @@
 # See https://doc.rust-lang.org/cargo/reference/manifest.html
 [package]
 name = "clinvoice-config"
-version = "0.7.2"
+version = "0.7.3"
 authors = ["Iron-E <code.iron.e@gmail.com>"]
 description = "User configuration of CLInvoice."
 
@@ -11,7 +11,7 @@ readme = "README.md"
 repository = "https://www.github.com/Iron-E/clinvoice-config"
 
 [dependencies]
-clinvoice-schema = {branch = "release/0.9", features = ["serde"], git = "https://github.com/Iron-E/clinvoice-schema"}
+clinvoice-schema = {branch = "release/0.10", features = ["serde"], git = "https://github.com/Iron-E/clinvoice-schema"}
 
 dirs = "4"
 humantime-serde = "1"
