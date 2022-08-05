@@ -29,8 +29,8 @@ pub struct Organizations
 
 impl Organizations
 {
-	/// Returns the `[organizations] employer_id` configuration setting, or an [`Error::NotConfigured`] error if it
-	/// was not set.
+	/// Returns the `[organizations] employer_id` configuration setting, or an [`Error::NotConfigured`]
+	/// if it was not set.
 	pub fn employer_id_or_err(&self) -> Result<Id>
 	{
 		self
