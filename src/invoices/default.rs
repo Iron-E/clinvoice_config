@@ -4,8 +4,6 @@ impl Default for Invoices
 {
 	fn default() -> Self
 	{
-		Self {
-			default_currency: Currency::Usd,
-		}
+		Self { default_currency: Currency::Usd }
 	}
 }

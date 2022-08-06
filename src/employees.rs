@@ -19,7 +19,8 @@ use crate::{Error, Result};
 )]
 pub struct Employees
 {
-	/// The [`Id`] of the [`Employee`](clinvoice_schema::Employee) which uses this CLInvoice client.
+	/// The [`Id`] of the [`Employee`](clinvoice_schema::Employee) which uses this CLInvoice
+	/// client.
 	///
 	/// Frontends for CLInvoice should provide mechanisms to assign this setting for the user.
 	pub id: Option<Id>,
@@ -27,12 +28,10 @@ pub struct Employees
 
 impl Employees
 {
-	/// Returns the `[employees] id` configuration setting, or an [`Error::NotConfigured`] error if it
-	/// was not set.
+	/// Returns the `[employees] id` configuration setting, or an [`Error::NotConfigured`] error if
+	/// it was not set.
 	pub fn id_or_err(&self) -> Result<Id>
 	{
-		self
-			.id
-			.ok_or_else(|| Error::NotConfigured("id".into(), "employees".into()))
+		self.id.ok_or_else(|| Error::NotConfigured("id".into(), "employees".into()))
 	}
 }

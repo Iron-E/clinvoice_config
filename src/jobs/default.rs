@@ -4,8 +4,6 @@ impl Default for Jobs
 {
 	fn default() -> Self
 	{
-		Self {
-			default_increment: Duration::from_secs(300),
-		}
+		Self { default_increment: Duration::from_secs(300) }
 	}
 }

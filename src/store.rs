@@ -28,7 +28,6 @@ pub struct Store
 	/// The URL where CLInvoice can communicate with the storage. This setting is highly dependent
 	/// on the `adapter` which was chosen:
 	///
-	/// * [`Postgres`](Adapters::Postgres): the connection URI per
-	///   [https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING]
+	/// * [`Postgres`](Adapters::Postgres): the connection URI per [https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING]
 	pub url: String,
 }

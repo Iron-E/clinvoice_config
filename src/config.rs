@@ -54,8 +54,8 @@ pub struct Config
 	/// The `[stores]` field, which dictates the [`Store`]s that CLInvoice may operate on. Keyed
 	/// on the label of the [`Store`].
 	///
-	/// The [`Store`] used by default should be labelled "default". [`Config::init`] will generate a
-	/// label with this name.
+	/// The [`Store`] used by default should be labelled "default". [`Config::init`] will generate
+	/// a label with this name.
 	///
 	/// # Notes
 	///
@@ -142,7 +142,8 @@ impl Config
 					"foo".into(),
 					StoreValue::Storage(Store {
 						adapter: Adapters::Postgres,
-						url: "See https://github.com/Iron-E/clinvoice/wiki/Usage#adapters".into(),
+						url:     "See https://github.com/Iron-E/clinvoice/wiki/Usage#adapters"
+							.into(),
 					}),
 				),
 			]
