@@ -176,7 +176,7 @@ impl Config
 	fn path() -> PathBuf
 	{
 		dirs::config_dir()
-			.expect("Operating System is not supported")
+			.expect("Operating System should be supported")
 			.join("clinvoice")
 			.join("config.toml")
 	}
