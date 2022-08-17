@@ -142,8 +142,7 @@ impl Config
 					"foo".into(),
 					StoreValue::Storage(Store {
 						adapter: Adapters::Postgres,
-						url:     "See https://github.com/Iron-E/clinvoice/wiki/Usage#adapters"
-							.into(),
+						url: "See https://github.com/Iron-E/clinvoice/wiki/Usage#adapters".into(),
 					}),
 				),
 			]
