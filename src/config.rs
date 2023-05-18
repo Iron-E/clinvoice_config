@@ -11,7 +11,7 @@ use crate::{Adapters, Employees, Error, Invoices, Jobs, Organizations, Result, S
 /// ## TOML
 ///
 /// ```rust
-/// # assert!(toml::from_str::<clinvoice_config::Config>(r#"
+/// # assert!(toml::from_str::<winvoice_config::Config>(r#"
 /// [employees]
 /// id = 1
 ///
@@ -51,7 +51,7 @@ pub struct Config
 	#[serde(default)]
 	pub organizations: Organizations,
 
-	/// The `[stores]` field, which dictates the [`Store`]s that CLInvoice may operate on. Keyed
+	/// The `[stores]` field, which dictates the [`Store`]s that Winvoice may operate on. Keyed
 	/// on the label of the [`Store`].
 	///
 	/// The [`Store`] used by default should be labelled "default". [`Config::init`] will generate
@@ -77,8 +77,8 @@ impl Config
 	/// ```rust
 	/// use core::time::Duration;
 	///
-	/// use clinvoice_config::{Adapters, Config, Employees, Invoices, Jobs, Store, StoreValue};
-	/// use clinvoice_schema::Currency;
+	/// use winvoice_config::{Adapters, Config, Employees, Invoices, Jobs, Store, StoreValue};
+	/// use winvoice_schema::Currency;
 	/// # use pretty_assertions::{assert_eq, assert_ne};
 	///
 	/// let conf: Config = toml::from_str(r#"
@@ -142,7 +142,7 @@ impl Config
 					"foo".into(),
 					StoreValue::Storage(Store {
 						adapter: Adapters::Postgres,
-						url: "See https://github.com/Iron-E/clinvoice/wiki/Usage#adapters".into(),
+						url: "See https://github.com/Iron-E/winvoice-cli/wiki/Usage#adapters".into(),
 					}),
 				),
 			]
@@ -176,7 +176,7 @@ impl Config
 	{
 		dirs::config_dir()
 			.expect("Operating System should be supported")
-			.join("clinvoice")
+			.join("winvoice")
 			.join("config.toml")
 	}
 

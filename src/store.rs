@@ -2,9 +2,9 @@ use serde::{Deserialize, Serialize};
 
 use crate::Adapters;
 
-/// A place for CLInvoice to store information.
+/// A place for Winvoice to store information.
 ///
-/// The storage should be set up by the [`Organization`](clinvoice_schema::Organization)'s IT
+/// The storage should be set up by the [`Organization`](winvoice_schema::Organization)'s IT
 /// administrator, taking care to provide a valid configuration for users.
 ///
 /// # Example
@@ -14,7 +14,7 @@ use crate::Adapters;
 /// For the [postgres adapter](Adapters::Postgres):
 ///
 /// ```rust
-/// # assert!(toml::from_str::<clinvoice_config::Store>(r#"
+/// # assert!(toml::from_str::<winvoice_config::Store>(r#"
 /// adapter = "postgres"
 /// url = "postgres://username:password@localhost:5432/database_name"
 /// # "#).is_ok());
@@ -25,7 +25,7 @@ pub struct Store
 	/// The type of storage system being used to store information.
 	pub adapter: Adapters,
 
-	/// The URL where CLInvoice can communicate with the storage. This setting is highly dependent
+	/// The URL where Winvoice can communicate with the storage. This setting is highly dependent
 	/// on the `adapter` which was chosen:
 	///
 	/// * [`Postgres`](Adapters::Postgres): the connection URI per [https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING]

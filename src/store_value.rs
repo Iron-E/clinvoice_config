@@ -11,7 +11,7 @@ use crate::Store;
 /// The following creates a storage named "a", and sets it as the default:
 ///
 /// ```rust
-/// # assert!(toml::from_str::<std::collections::HashMap<String, clinvoice_config::StoreValue>>(r#"
+/// # assert!(toml::from_str::<std::collections::HashMap<String, winvoice_config::StoreValue>>(r#"
 /// default = "a"
 ///
 /// [a]

@@ -1,23 +1,29 @@
 # See https://doc.rust-lang.org/cargo/reference/manifest.html
 [package]
-name = "clinvoice-config"
+name = "winvoice-config"
 version = "0.7.4"
 authors = ["Iron-E <code.iron.e@gmail.com>"]
-description = "User configuration of CLInvoice."
+description = "User configuration of Winvoice."
 
 edition = "2021"
 license = "GPL3"
 readme = "README.md"
-repository = "https://www.github.com/Iron-E/clinvoice-config"
+repository = "https://www.github.com/Iron-E/winvoice-config"
 
 [dependencies]
-clinvoice-schema = {branch = "release/0.11", features = ["serde"], git = "https://github.com/Iron-E/clinvoice-schema"}
-
 dirs = "4"
 humantime-serde = "1"
-serde = {features = ["derive"], version = "1"}
 thiserror = "1"
 toml = "0.5"
+
+[dependencies.serde]
+features = ["derive"]
+version = "1"
+
+[dependencies.winvoice-schema]
+branch = "release/0.12"
+features = ["serde"]
+git = "https://github.com/Iron-E/winvoice-schema"
 
 [dev-dependencies]
 pretty_assertions = "1"

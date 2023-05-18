@@ -1,16 +1,16 @@
-use clinvoice_schema::Id;
+use winvoice_schema::Id;
 use serde::{Deserialize, Serialize};
 
 use crate::{Error, Result};
 
-/// Configurations for [`Employee`](clinvoice_schema::Employee)s.
+/// Configurations for [`Employee`](winvoice_schema::Employee)s.
 ///
 /// # Examples
 ///
 /// ## TOML
 ///
 /// ```rust
-/// # assert!(toml::from_str::<clinvoice_config::Employees>(r#"
+/// # assert!(toml::from_str::<winvoice_config::Employees>(r#"
 /// id = 1
 /// # "#).is_ok());
 /// ```
@@ -19,10 +19,10 @@ use crate::{Error, Result};
 )]
 pub struct Employees
 {
-	/// The [`Id`] of the [`Employee`](clinvoice_schema::Employee) which uses this CLInvoice
+	/// The [`Id`] of the [`Employee`](winvoice_schema::Employee) which uses this Winvoice
 	/// client.
 	///
-	/// Frontends for CLInvoice should provide mechanisms to assign this setting for the user.
+	/// Frontends for Winvoice should provide mechanisms to assign this setting for the user.
 	pub id: Option<Id>,
 }
 
