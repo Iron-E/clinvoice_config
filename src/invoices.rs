@@ -1,7 +1,7 @@
 mod default;
 
-use winvoice_schema::Currency;
 use serde::{Deserialize, Serialize};
+use winvoice_schema::Currency;
 
 /// Configurations for [`Invoice`](winvoice_schema::Invoice)s.
 ///

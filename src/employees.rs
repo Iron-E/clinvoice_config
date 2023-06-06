@@ -1,5 +1,5 @@
-use winvoice_schema::Id;
 use serde::{Deserialize, Serialize};
+use winvoice_schema::Id;
 
 use crate::{Error, Result};
 
