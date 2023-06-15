@@ -11,7 +11,7 @@ use crate::{Error, Result};
 ///
 /// ```rust
 /// # assert!(toml::from_str::<winvoice_config::Organizations>(r#"
-/// employer_id = 1
+/// employer_id = "e58fbcdc-97cf-4bbf-8d11-a51c0380091d"
 /// # "#).is_ok());
 /// ```
 #[derive(

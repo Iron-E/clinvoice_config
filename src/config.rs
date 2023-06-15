@@ -13,7 +13,7 @@ use crate::{Adapters, Employees, Error, Invoices, Jobs, Organizations, Result, S
 /// ```rust
 /// # assert!(toml::from_str::<winvoice_config::Config>(r#"
 /// [employees]
-/// id = 1
+/// id = "950aaa15-6520-4b27-9676-e3c5443b4731"
 ///
 /// [invoices]
 /// default_currency = "USD"
@@ -22,7 +22,7 @@ use crate::{Adapters, Employees, Error, Invoices, Jobs, Organizations, Result, S
 /// default_increment = "15min"
 ///
 /// [organizations]
-/// employer_id = 2
+/// employer_id = "653fe7ad-9a2c-4c52-a4a2-f50a10ec8758"
 ///
 /// [stores]
 /// default = "foo"
