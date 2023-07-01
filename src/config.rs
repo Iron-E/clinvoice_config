@@ -59,8 +59,7 @@ pub struct Config
 	///
 	/// # Notes
 	///
-	/// * This is a [`BTreeMap`] because, since it is sorted, it guarantees serialization in a
-	///   consistent order.
+	/// * This is a [`BTreeMap`] because, since it is sorted, it guarantees serialization in a consistent order.
 	#[serde(default)]
 	stores: BTreeMap<String, StoreValue>,
 }
@@ -131,8 +130,8 @@ impl Config
 	///
 	/// # Warnings
 	///
-	/// * This function _will_ clobber an existing configuration! Check that [`Config::path`] is not
-	///   [a file](std::path::Path::is_file) before use.
+	/// * This function _will_ clobber an existing configuration! Check that [`Config::path`] is not [a
+	///   file](std::path::Path::is_file) before use.
 	fn init() -> Result<Self>
 	{
 		let config = Self {
