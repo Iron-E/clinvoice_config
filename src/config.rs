@@ -142,8 +142,7 @@ impl Config
 					"foo".into(),
 					StoreValue::Storage(Store {
 						adapter: Adapters::Postgres,
-						url: "See https://github.com/Iron-E/winvoice-cli/wiki/Usage#adapters"
-							.into(),
+						url: "See https://github.com/Iron-E/winvoice-cli/wiki/Usage#adapters".into(),
 					}),
 				),
 			]
@@ -175,10 +174,7 @@ impl Config
 	/// The place where a user [`Config`] should be stored on the hard drive.
 	fn path() -> PathBuf
 	{
-		dirs::config_dir()
-			.expect("Operating System should be supported")
-			.join("winvoice")
-			.join("config.toml")
+		dirs::config_dir().expect("Operating System should be supported").join("winvoice").join("config.toml")
 	}
 
 	/// Save an in-memory [`Config`] to disk at the [`Config::path`].

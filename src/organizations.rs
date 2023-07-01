@@ -14,9 +14,7 @@ use crate::{Error, Result};
 /// employer_id = "e58fbcdc-97cf-4bbf-8d11-a51c0380091d"
 /// # "#).is_ok());
 /// ```
-#[derive(
-	Copy, Clone, Debug, Default, Deserialize, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize,
-)]
+#[derive(Copy, Clone, Debug, Default, Deserialize, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
 pub struct Organizations
 {
 	/// The [`Id`] of the [`Organization`](winvoice_schema::Organization) which uses the Winvoice
@@ -33,7 +31,6 @@ impl Organizations
 	/// [`Error::NotConfigured`] if it was not set.
 	pub fn employer_id_or_err(&self) -> Result<Id>
 	{
-		self.employer_id
-			.ok_or_else(|| Error::NotConfigured("employer_id".into(), "organizations".into()))
+		self.employer_id.ok_or_else(|| Error::NotConfigured("employer_id".into(), "organizations".into()))
 	}
 }

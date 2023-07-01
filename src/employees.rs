@@ -14,9 +14,7 @@ use crate::{Error, Result};
 /// id = "9c84b434-1ce4-4828-992a-77d50255694b"
 /// # "#).is_ok());
 /// ```
-#[derive(
-	Copy, Clone, Debug, Default, Deserialize, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize,
-)]
+#[derive(Copy, Clone, Debug, Default, Deserialize, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
 pub struct Employees
 {
 	/// The [`Id`] of the [`Employee`](winvoice_schema::Employee) which uses this Winvoice
